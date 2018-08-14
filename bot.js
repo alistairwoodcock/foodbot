@@ -251,7 +251,7 @@ function doGame(data, cmd, args) {
             var randoIndexes = [];
 
             while(randoIndexes.length < 5) {
-                var index = getRandom(0, 4);
+                var index = getRandom(0, placeNames.length - 1);
 
                 if(randoIndexes.includes(index)) continue;
 
@@ -289,7 +289,7 @@ function doGame(data, cmd, args) {
 
                     var place1 = args[0];
 
-                    if (!(place1 in places)) {
+                    if (!(gameState.pickedTwo.includes(place2))) {
                         bot.sendMessage({
                             to: data.channelID,
                             message: `no such place '${place1}'`,
@@ -300,7 +300,7 @@ function doGame(data, cmd, args) {
 
                     var place2 = args[1];
 
-                    if (!(place2 in places)) {
+                    if (!(gameState.pickedTwo.includes(place2))) {
                         bot.sendMessage({
                             to: data.channelID,
                             message: `no such place '${place2}'`,
