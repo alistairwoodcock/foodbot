@@ -20,7 +20,7 @@ var bot = new Discord.Client({
 });
 
 (() => {
-let p_json = null;
+    var p_json = null;
     try {
         p_json = require('./places.json');
         places = p_json;
