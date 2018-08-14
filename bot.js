@@ -289,7 +289,7 @@ function doGame(data, cmd, args) {
 
                     var place1 = args[0];
 
-                    if (!(gameState.pickedTwo.includes(place2))) {
+                    if (!(gameState.pickTwo.includes(place1))) {
                         bot.sendMessage({
                             to: data.channelID,
                             message: `no such place '${place1}'`,
@@ -301,7 +301,7 @@ function doGame(data, cmd, args) {
 
                     var place2 = args[1];
 
-                    if (!(gameState.pickedTwo.includes(place2))) {
+                    if (!(gameState.pickTwo.includes(place2))) {
                         bot.sendMessage({
                             to: data.channelID,
                             message: `no such place '${place2}'`,
