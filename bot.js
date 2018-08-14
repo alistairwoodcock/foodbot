@@ -294,6 +294,7 @@ function doGame(data, cmd, args) {
                             to: data.channelID,
                             message: `no such place '${place1}'`,
                         });
+                        break;
                     } else {
                         gameState.pickedTwo.push(place1);
                     }
@@ -305,6 +306,7 @@ function doGame(data, cmd, args) {
                             to: data.channelID,
                             message: `no such place '${place2}'`,
                         });
+                        break;
                     } else {
                         gameState.pickedTwo.push(place2);
                     }
