@@ -12,23 +12,21 @@ var gameState = {
     pickedTwo: [], // Options picked
 }
 
-let p_json = null;
-try {
-    p_json = require('./places.json');
-} catch (error) {
-
-}
-
 var places = {};
-
-if(p_json) {
-    places = p_json;
-}
 
 var bot = new Discord.Client({
     token: auth.token,
     autorun: true
 });
+
+(() => {
+let p_json = null;
+    try {
+        p_json = require('./places.json');
+        places = p_json;
+    } catch (error) {}
+})();
+
 
 bot.on('ready', function() {
     console.log('Logged in as %s - %s\n', bot.username, bot.id);
