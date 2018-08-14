@@ -1,0 +1,24 @@
+{
+    "susuru": {
+        "tags": [
+            "ramen",
+            "noods",
+            "noodles",
+            "japanese"
+        ]
+    },
+    "kitami": {
+        "tags": [
+            "japanese",
+            "noodles",
+            "noods"
+        ]
+    },
+    "asadon": {
+        "tags": [
+            "noods",
+            "noodles",
+            "japanese"
+        ]
+    }
+}
