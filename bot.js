@@ -160,6 +160,28 @@ function doCommand(data, cmd, args) {
         }
         break;
 
+        case 'remove':
+        {
+            var placeName = args[0];
+
+            if(!placeName) {
+                bot.sendMessage({
+                    to: data.channelID,
+                    message: `Please give a place to remove`
+                });
+                break;
+            }
+
+            delete places[placeName];
+
+            bot.sendMessage({
+                to: data.channelID,
+                message: `It's gone my friend`
+            });
+
+        }
+        break;
+
         case 'help':
         case 'food':
         case 'play':
